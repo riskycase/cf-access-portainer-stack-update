@@ -25670,10 +25670,12 @@ function run() {
             const cfHeaderSecret = core_1.default.getInput("cf-client-secret");
             const endpoint = core_1.default.getInput("endpoint");
             const client = new http_client_1.HttpClient();
-            yield client.post(endpoint, "", {
+            yield client
+                .post(endpoint, "", {
                 "CF-Access-Client-Id": cfHeaderId,
                 "CF-Access-Client-Secret": cfHeaderSecret,
-            });
+            })
+                .catch((error) => console.error(error));
         }
         catch (error) {
             core_1.default.setFailed(error.message);

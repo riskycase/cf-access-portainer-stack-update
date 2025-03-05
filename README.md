@@ -19,7 +19,7 @@ This action prints sends an empty post request to the endpoint specified behind 
 ## Example usage
 
 ```yaml
-uses: riskycase/cf-access-portainer-stack-update
+uses: riskycase/cf-access-portainer-stack-update@v1
 with:
   cf-client-id: ${{ secrets.cf-client-id }}
   cf-client-secret: ${{ secrets.cf-client-secret }}

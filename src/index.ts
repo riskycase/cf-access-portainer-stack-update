@@ -7,10 +7,12 @@ async function run() {
     const cfHeaderSecret = core.getInput("cf-client-secret");
     const endpoint = core.getInput("endpoint");
     const client = new HttpClient();
-    await client.post(endpoint, "", {
-      "CF-Access-Client-Id": cfHeaderId,
-      "CF-Access-Client-Secret": cfHeaderSecret,
-    });
+    await client
+      .post(endpoint, "", {
+        "CF-Access-Client-Id": cfHeaderId,
+        "CF-Access-Client-Secret": cfHeaderSecret,
+      })
+      .catch((error) => console.error(error));
   } catch (error: any) {
     core.setFailed(error.message);
   }
