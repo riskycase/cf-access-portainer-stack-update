@@ -1,0 +1,26 @@
+{
+  "name": "cf-access-portainer-stack-update",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "GPL-3.0-only",
+  "scripts": {
+    "prepare": "husky"
+  },
+  "keywords": [],
+  "author": "Hrishikesh Patil <hrishikeshpatil.754@gmail.com>",
+  "description": "",
+  "dependencies": {
+    "@actions/core": "^1.11.1",
+    "@actions/http-client": "^2.2.3",
+    "@vercel/ncc": "^0.38.3",
+    "husky": "^9.1.7",
+    "lint-staged": "^15.4.3",
+    "prettier": "^3.5.3"
+  },
+  "engines": {
+    "node": "^20"
+  },
+  "devDependencies": {
+    "typescript": "^5.8.2"
+  }
+}

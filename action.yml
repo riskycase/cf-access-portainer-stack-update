@@ -1,0 +1,18 @@
+name: 'Cloudflare Access <> Portainer Stack Webhook'
+description: 'Dispatch Portainer stack webhook to a deployment behind cloudflare access'
+branding:
+  icon: 'link'
+  color: 'gray-dark'
+inputs:
+  cf-client-id:  # id of input
+    description: 'Client ID provided by Cloudflare Access'
+    required: true
+  cf-client-secret:  # id of input
+    description: 'Client secret provided by Cloudflare Access'
+    required: true
+  endpoint:  # id of input
+    description: 'Endpoint to make post request to'
+    required: true
+runs:
+  using: 'node20'
+  main: 'dist/index.js'
